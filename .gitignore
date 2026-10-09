@@ -1,0 +1,20 @@
+# large or licensed assets live outside git (see episodes/*/assets.md)
+models/
+music/
+out/
+*.blend
+*.blend1
+*.glb
+*.gltf
+*.mp4
+*.mov
+*.mp3
+*.wav
+# rendered frames, stills, proofs
+*.png
+*.jpg
+*.exr
+# python / OS
+__pycache__/
+*.pyc
+.DS_Store

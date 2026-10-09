@@ -1,0 +1,9 @@
+[
+  {"id": "L6_dome", "t_in": 3.4, "t_out": 7.0, "text": "越往上越薄越轻", "sub": "厚约 6 米 → 1.2 米 · 重石 → 浮石", "anchor_part": "dome_outer"},
+  {"id": "L4_coffers", "t_in": 7.6, "t_out": 10.6, "text": "5 圈藻井，每圈 28 格", "sub": "共 140 格", "anchor_part": "scan_dome"},
+  {"id": "L5_oculus", "t_in": 11.4, "t_out": 14.9, "text": "顶上开洞：唯一天窗", "sub": "下雨直接落进来 · 地板有排水孔", "anchor_part": "oculus"},
+  {"id": "L2_columns", "t_in": 15.6, "t_out": 17.9, "text": "16 根整块花岗岩柱", "sub": "柱身高 11.9 米 · 从埃及运来", "anchor_part": "portico_columns"},
+  {"id": "L3_pediment", "t_in": 18.1, "t_out": 20.4, "text": "门头刻的是阿格里帕", "sub": "实为哈德良重建 · 约公元 118–128 年", "anchor_part": "pediment"},
+  {"id": "L1_arches", "t_in": 22.7, "t_out": 26.6, "text": "墙不是实心的，藏着空腔和砖拱", "sub": "三层砖拱把穹顶重量引向 8 根墩柱", "anchor_part": "wall_diagram", "size": 56},
+  {"id": "L7_sphere", "t_in": 28.8, "t_out": 31.9, "text": "里面正好装下一个球", "sub": "直径 = 高度 ≈ 43.3 米", "anchor_part": "section_sphere"}
+]

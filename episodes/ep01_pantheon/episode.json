@@ -1,0 +1,1299 @@
+{
+ "episode": "ep01",
+ "title": "万神殿 Pantheon, Rome — 名建筑拆解 01",
+ "script": "SCRIPT.md (beat sheet; the exploded-view order is in 'explode'), labels.json, captions.json",
+ "style": "real",
+ "builder": "build_pantheon.py",
+ "wall_layers": true,
+ "fps": 24,
+ "duration": 40,
+ "lens": 38,
+ "render": {
+  "samples": 24,
+  "shadow_res": 0.4,
+  "raytracing": true,
+  "fast_gi": true
+ },
+ "real_render": {
+  "samples": 16,
+  "shadow_res": 0.45
+ },
+ "render_segments_note": "1080x1920 final, chosen by out/speed_study (2026-09-29): ray tracing off everywhere (the approved draft 2 look; in the scan interior it changes nothing, rms 0.3-1.1/255, and costs 20%), shadow_res 0.45, volumetric tile 8 (scan default, same in drafts); 12 samples (noise vs a 64-sample reference below draft 2 everywhere), 16 in the wall diagram (ghosted skin + dark voids are the noisiest pixels of the film)",
+ "render_segments": [
+  {
+   "name": "exterior",
+   "t": [
+    0.0,
+    10.6
+   ],
+   "samples": 12,
+   "raytracing": 0,
+   "shadow_res": 0.45
+  },
+  {
+   "name": "interior",
+   "t": [
+    10.6,
+    15.0
+   ],
+   "samples": 12,
+   "raytracing": 0,
+   "shadow_res": 0.45
+  },
+  {
+   "name": "portico",
+   "t": [
+    15.0,
+    20.45
+   ],
+   "samples": 12,
+   "raytracing": 0,
+   "shadow_res": 0.45
+  },
+  {
+   "name": "diagram",
+   "t": [
+    20.45,
+    26.95
+   ],
+   "samples": 16,
+   "raytracing": 0,
+   "shadow_res": 0.45
+  },
+  {
+   "name": "cutaway",
+   "t": [
+    26.95,
+    40.0
+   ],
+   "samples": 12,
+   "raytracing": 0,
+   "shadow_res": 0.45
+  }
+ ],
+ "backdrop": "table",
+ "palette": {
+  "table": "#EDE9E1",
+  "paving": "#C4B9A5",
+  "paving_light": "#DDD5C5",
+  "brick": "#C98A62",
+  "brick_dark": "#A1603F",
+  "travertine": "#E8DABD",
+  "travertine_dark": "#D6C4A0",
+  "marble_white": "#F2ECE1",
+  "granite_grey": "#8A8F97",
+  "granite_pink": "#BC8577",
+  "roof_lead": "#8C969D",
+  "lead": "#9FA9B0",
+  "lead_light": "#BAC1C4",
+  "coffer_rib": "#DDD5C6",
+  "coffer_in": "#BEB6A7",
+  "coffer_back": "#A9B5BE",
+  "coffer_plain": "#D3CBBC",
+  "marble_int": "#DDC089",
+  "attic": "#E6DDCF",
+  "niche": "#8F6E7C",
+  "giallo": "#DDB86C",
+  "porphyry": "#99493F",
+  "bronze": "#72603F",
+  "bronze_dark": "#4F4432"
+ },
+ "real_palette": {
+  "piazza": "#B8AC96",
+  "table": "#B8AC96",
+  "paving": "#BEB29B",
+  "paving_light": "#D4C9B3"
+ },
+ "real_look": {
+  "preset": "golden_hour",
+  "sun_az": 70.0,
+  "sun_el": 12.0,
+  "sun_strength": 12.0,
+  "sun_hex": "#FFB462",
+  "sky_strength": 0.18,
+  "sky_light_hex": "#8DB0D4",
+  "haze_hex": "#76808F",
+  "haze_strength": 0.95,
+  "sky_mid_hex": "#62728C",
+  "sky_zenith_hex": "#223453",
+  "sky_mid_z": 0.1,
+  "sky_zenith_z": 0.36,
+  "sun_glow_hex": "#FFBE72",
+  "sun_glow": 0.6,
+  "sun_glow_width": 0.3,
+  "clouds": 0.9,
+  "cloud_hex": "#4C5569",
+  "cloud_lit_hex": "#F0B283",
+  "rim_az": 200.0,
+  "rim_el": 14.0,
+  "rim_strength": 2.6,
+  "rim_hex": "#FFBF7A",
+  "rim_angle": 3.0,
+  "city_haze0": 0.5,
+  "city_haze1": 0.88,
+  "sun_keys": [
+   [
+    0.0,
+    1.0
+   ],
+   [
+    20.3,
+    1.0
+   ],
+   [
+    21.8,
+    0.1
+   ],
+   [
+    26.958333,
+    0.1
+   ],
+   [
+    27.0,
+    1.0
+   ],
+   [
+    40.0,
+    1.0
+   ]
+  ]
+ },
+ "sphere_line": "#E0A526",
+ "sphere_fill": "#F2C35A",
+ "setting": {
+  "ground": {
+   "variation": 0.12
+  },
+  "props": [
+   {
+    "type": "bollards",
+    "path": [
+     [
+      -30,
+      -44
+     ],
+     [
+      -30,
+      -78
+     ],
+     [
+      30,
+      -78
+     ],
+     [
+      30,
+      -44
+     ]
+    ],
+    "spacing": 4.3,
+    "h": 0.95,
+    "d": 0.36
+   },
+   {
+    "type": "fountain_obelisk",
+    "pos": [
+     -62,
+     -72
+    ],
+    "basin_r": 5.4,
+    "obelisk_h": 6.3
+   }
+  ],
+  "backdrop": {
+   "type": "city_ring",
+   "r0": 150,
+   "r1": 235,
+   "count": 58,
+   "rows": 2,
+   "h": [
+    12,
+    22
+   ],
+   "w": [
+    16,
+    34
+   ],
+   "seed": 11,
+   "tower_p": 0.07
+  }
+ },
+ "scan": {
+  "blend": "models/pantheon/interior_prepped.blend",
+  "collection": "pantheon_interior_scan",
+  "tex": 2048,
+  "z_split": 21.9,
+  "split_x": true,
+  "floor_z": 0.6,
+  "floor_r": 21.0,
+  "shading": {
+   "emission": 0.78,
+   "principled": 0.22,
+   "roughness": 0.8
+  },
+  "sat": 1.08,
+  "back_hex": "#A89D8B",
+  "volumetric": {
+   "samples": 32,
+   "tile": 8,
+   "end": 300
+  }
+ },
+ "hide": [
+  {
+   "part": "coffers"
+  },
+  {
+   "part": "floor"
+  },
+  {
+   "part": "ring_wall",
+   "role": "interior"
+  },
+  {
+   "part": "relieving_arches"
+  }
+ ],
+ "kill_inner": [
+  {
+   "select": {
+    "part": "ring_wall",
+    "match": {
+     "layer": "core"
+    }
+   },
+   "r_max": 22.0,
+   "z_max": 21.6
+  }
+ ],
+ "groups": [
+  {
+   "name": "door_L",
+   "pivot": [
+    0,
+    27.75,
+    0
+   ],
+   "members": [
+    {
+     "part": "ring_wall",
+     "match": {
+      "layer": [
+       "core",
+       "skin"
+      ]
+     },
+     "side": "L"
+    },
+    {
+     "part": "relieving_arches",
+     "side": "L"
+    },
+    {
+     "parts": [
+      "scan_wall",
+      "scan_dome"
+     ],
+     "side": "L"
+    },
+    {
+     "parts": [
+      "dome_outer",
+      "oculus"
+     ],
+     "side": "L"
+    }
+   ]
+  }
+ ],
+ "explode": [
+  {
+   "beat": "2.0 dome (outer bands + coffered inner shell + oculus) lifts off the drum",
+   "t": 2.0,
+   "dur": 1.4,
+   "select": {
+    "parts": [
+     "dome_outer",
+     "scan_dome",
+     "oculus"
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    12
+   ],
+   "easing": "EASE"
+  },
+  {
+   "beat": "3.4 outer bands spread upward (thick/heavy at the bottom -> thin/light at the top)",
+   "t": 3.4,
+   "dur": 2.6,
+   "select": {
+    "part": "dome_outer"
+   },
+   "step": [
+    0,
+    0,
+    2.0
+   ],
+   "step_by": "ring",
+   "order": "ring",
+   "ring_step": 0.12,
+   "stagger": 0.0,
+   "easing": "EASE"
+  },
+  {
+   "t": 4.72,
+   "dur": 2.6,
+   "select": {
+    "part": "oculus"
+   },
+   "offset": [
+    0,
+    0,
+    22
+   ],
+   "easing": "EASE"
+  },
+  {
+   "beat": "7.0 nested bowls pull apart: coffered shell back down, outer stack up",
+   "t": 7.0,
+   "dur": 3.0,
+   "select": {
+    "part": "scan_dome"
+   },
+   "offset": [
+    0,
+    0,
+    -12
+   ],
+   "easing": "EASE"
+  },
+  {
+   "t": 7.0,
+   "dur": 3.0,
+   "select": {
+    "parts": [
+     "dome_outer",
+     "oculus"
+    ]
+   },
+   "offset": [
+    0,
+    0,
+    8
+   ],
+   "order": "ring",
+   "ring_step": 0.04,
+   "easing": "EASE"
+  },
+  {
+   "beat": "10.4 bronze oculus ring rises (camera dives through the oculus)",
+   "t": 10.4,
+   "dur": 1.4,
+   "select": {
+    "part": "oculus"
+   },
+   "offset": [
+    0,
+    0,
+    14
+   ],
+   "easing": "EASE"
+  },
+  {
+   "beat": "15.3 portico slides forward, then the pediment lifts",
+   "t": 15.3,
+   "dur": 1.6,
+   "select": {
+    "parts": [
+     "portico_columns",
+     "pediment"
+    ]
+   },
+   "offset": [
+    0,
+    -12,
+    0
+   ],
+   "easing": "EASE"
+  },
+  {
+   "t": 15.3,
+   "dur": 1.6,
+   "select": {
+    "part": "ground",
+    "role": [
+     "podium",
+     "steps"
+    ]
+   },
+   "offset": [
+    0,
+    -12,
+    0
+   ],
+   "easing": "EASE"
+  },
+  {
+   "t": 17.2,
+   "dur": 1.0,
+   "select": {
+    "part": "pediment"
+   },
+   "offset": [
+    0,
+    0,
+    3
+   ],
+   "easing": "BACK",
+   "overshoot": 1.2
+  },
+  {
+   "beat": "20.5 dome stack comes back down onto the drum (the load starts at its base)",
+   "t": 20.5,
+   "dur": 1.8,
+   "select": {
+    "part": "dome_outer"
+   },
+   "reassemble": true,
+   "order": "ring",
+   "ring_step": 0.05,
+   "easing": "EASE",
+   "stagger": 0.0
+  },
+  {
+   "t": 20.9,
+   "dur": 1.8,
+   "select": {
+    "part": "oculus"
+   },
+   "reassemble": true,
+   "easing": "EASE",
+   "stagger": 0.0
+  },
+  {
+   "beat": "27.25 the left half of the rotunda swings open and away (cutaway without a section plane)",
+   "t": 27.25,
+   "dur": 1.6,
+   "group": "door_L",
+   "rotate": {
+    "axis": "Z",
+    "angle": -85
+   },
+   "offset": [
+    8,
+    55,
+    0
+   ]
+  },
+  {
+   "beat": "32.3 reassembly: half, portico, pediment (small overshoot)",
+   "t": 32.3,
+   "dur": 1.3,
+   "reassemble": true,
+   "select": null,
+   "groups": [
+    "door_L"
+   ],
+   "easing": "BACK",
+   "overshoot": 1.25
+  },
+  {
+   "t": 33.3,
+   "dur": 1.2,
+   "select": {
+    "parts": [
+     "portico_columns",
+     "pediment"
+    ]
+   },
+   "offset": [
+    0,
+    12,
+    0
+   ],
+   "easing": "BACK",
+   "overshoot": 1.15
+  },
+  {
+   "t": 33.3,
+   "dur": 1.2,
+   "select": {
+    "part": "ground",
+    "role": [
+     "podium",
+     "steps"
+    ]
+   },
+   "offset": [
+    0,
+    12,
+    0
+   ],
+   "easing": "BACK",
+   "overshoot": 1.15
+  },
+  {
+   "t": 34.5,
+   "dur": 0.8,
+   "select": {
+    "part": "pediment"
+   },
+   "offset": [
+    0,
+    0,
+    -3
+   ],
+   "easing": "BACK",
+   "overshoot": 1.4
+  }
+ ],
+ "visibility": [
+  {
+   "select": {
+    "objects": [
+     "scan_volume"
+    ]
+   },
+   "show": [
+    [
+     10.6,
+     15.0
+    ]
+   ]
+  },
+  {
+   "select": {
+    "parts": [
+     "scan_dome",
+     "scan_floor"
+    ]
+   },
+   "show": [
+    [
+     1.9,
+     35.6
+    ]
+   ]
+  },
+  {
+   "select": {
+    "part": "scan_wall"
+   },
+   "show": [
+    [
+     1.9,
+     20.45
+    ],
+    [
+     26.95,
+     35.6
+    ]
+   ]
+  },
+  {
+   "select": {
+    "part": "ring_wall",
+    "match": {
+     "layer": "core"
+    }
+   },
+   "show": [
+    [
+     0.0,
+     20.45
+    ],
+    [
+     26.95,
+     40.1
+    ]
+   ]
+  },
+  {
+   "select": {
+    "parts": [
+     "wall_diagram",
+     "load_flow"
+    ]
+   },
+   "show": [
+    [
+     20.45,
+     26.95
+    ]
+   ]
+  }
+ ],
+ "schedule": [
+  {
+   "beat": "28.3-31.9 L7 inscribed sphere",
+   "part": "section_sphere",
+   "t": 28.3,
+   "dur": 1.0,
+   "mode": "pop",
+   "overshoot": 1.2
+  },
+  {
+   "part": "section_sphere",
+   "t": 31.9,
+   "dur": 0.45,
+   "mode": "vanish"
+  }
+ ],
+ "section": [],
+ "camera": [
+  {
+   "t": 0.0,
+   "az": -38,
+   "el": 13,
+   "dist": 178,
+   "target": [
+    0,
+    -14,
+    16
+   ],
+   "lens": 38,
+   "interp": "LINEAR"
+  },
+  {
+   "t": 1.8,
+   "az": -30.8,
+   "el": 13,
+   "dist": 178,
+   "target": [
+    0,
+    -14,
+    16
+   ],
+   "lens": 38
+  },
+  {
+   "t": 4.4,
+   "az": -20,
+   "el": 19,
+   "dist": 188,
+   "target": [
+    0,
+    -9,
+    32
+   ],
+   "lens": 38
+  },
+  {
+   "t": 6.8,
+   "az": -8,
+   "el": 22,
+   "dist": 192,
+   "target": [
+    0,
+    -6,
+    44
+   ],
+   "lens": 38
+  },
+  {
+   "t": 9.0,
+   "az": 4,
+   "el": 27,
+   "dist": 184,
+   "target": [
+    0,
+    -4,
+    45
+   ],
+   "lens": 38
+  },
+  {
+   "t": 10.5,
+   "az": 18,
+   "el": 42,
+   "dist": 168,
+   "target": [
+    0,
+    -2,
+    50
+   ],
+   "lens": 36
+  },
+  {
+   "t": 11.6,
+   "az": 60,
+   "el": 78,
+   "dist": 105,
+   "target": [
+    0,
+    0,
+    62
+   ],
+   "lens": 30
+  },
+  {
+   "t": 12.333333,
+   "az": 110,
+   "el": 89.4,
+   "dist": 24,
+   "target": [
+    0,
+    0,
+    43.3
+   ],
+   "lens": 26,
+   "interp": "HOLD"
+  },
+  {
+   "t": 12.375,
+   "az": 180,
+   "el": -89.4,
+   "dist": 14.3,
+   "target": [
+    0,
+    0,
+    43.3
+   ],
+   "lens": 18
+  },
+  {
+   "t": 14.2,
+   "az": 180,
+   "el": -48,
+   "dist": 2,
+   "target": [
+    0,
+    10.66,
+    4.0
+   ],
+   "lens": 14
+  },
+  {
+   "t": 14.958,
+   "az": 188,
+   "el": -51,
+   "dist": 2,
+   "target": [
+    0,
+    11.4,
+    4.6
+   ],
+   "lens": 14,
+   "interp": "HOLD"
+  },
+  {
+   "t": 15.0,
+   "az": -30,
+   "el": 8,
+   "dist": 118,
+   "target": [
+    0,
+    -40,
+    13
+   ],
+   "lens": 38
+  },
+  {
+   "t": 17.2,
+   "az": -18,
+   "el": 7,
+   "dist": 104,
+   "target": [
+    0,
+    -50,
+    14
+   ],
+   "lens": 38
+  },
+  {
+   "t": 19.2,
+   "az": -6,
+   "el": 8,
+   "dist": 82,
+   "target": [
+    0,
+    -58,
+    18
+   ],
+   "lens": 38
+  },
+  {
+   "t": 21.3,
+   "az": 50,
+   "el": 9,
+   "dist": 100,
+   "target": [
+    0,
+    -3,
+    17
+   ],
+   "lens": 38
+  },
+  {
+   "t": 23.0,
+   "az": 63,
+   "el": 8,
+   "dist": 90,
+   "target": [
+    0,
+    0,
+    16
+   ],
+   "lens": 38
+  },
+  {
+   "t": 26.958333,
+   "az": 70,
+   "el": 8,
+   "dist": 88,
+   "target": [
+    0,
+    0,
+    16
+   ],
+   "lens": 38,
+   "interp": "HOLD"
+  },
+  {
+   "t": 27.0,
+   "az": -70,
+   "el": 9,
+   "dist": 148,
+   "target": [
+    0,
+    2,
+    25
+   ],
+   "lens": 38
+  },
+  {
+   "t": 29.2,
+   "az": -78,
+   "el": 8,
+   "dist": 142,
+   "target": [
+    0,
+    2,
+    25
+   ],
+   "lens": 38
+  },
+  {
+   "t": 31.9,
+   "az": -85,
+   "el": 8,
+   "dist": 138,
+   "target": [
+    0,
+    2,
+    25
+   ],
+   "lens": 38
+  },
+  {
+   "t": 35.0,
+   "az": -58,
+   "el": 13,
+   "dist": 178,
+   "target": [
+    0,
+    -14,
+    16
+   ],
+   "lens": 38,
+   "interp": "LINEAR"
+  },
+  {
+   "t": 40.0,
+   "az": -38,
+   "el": 13,
+   "dist": 178,
+   "target": [
+    0,
+    -14,
+    16
+   ],
+   "lens": 38
+  }
+ ],
+ "anchors": [
+  {
+   "name": "bands",
+   "follow": {
+    "part": "dome_outer",
+    "rings": [
+     4
+    ],
+    "az": 250
+   },
+   "pos": [
+    -7.87,
+    -21.6,
+    34.0
+   ]
+  },
+  {
+   "name": "bowl",
+   "follow": {
+    "part": "scan_dome",
+    "side": "L",
+    "near": [
+     -6.0,
+     -16.4,
+     35.7
+    ]
+   },
+   "pos": [
+    -6.0,
+    -16.4,
+    35.7
+   ]
+  },
+  {
+   "name": "oculus",
+   "pos": [
+    0,
+    0,
+    43.4
+   ]
+  },
+  {
+   "name": "columns",
+   "follow": {
+    "part": "portico_columns",
+    "near": [
+     -11.14,
+     -50.0,
+     3.0
+    ]
+   },
+   "pos": [
+    -11.14,
+    -50.8,
+    9.0
+   ]
+  },
+  {
+   "name": "inscription",
+   "follow": {
+    "part": "pediment",
+    "role": "inscription"
+   },
+   "pos": [
+    -8.0,
+    -50.8,
+    17.1
+   ]
+  },
+  {
+   "name": "arches",
+   "pos": [
+    16.24,
+    -20.49,
+    22.5
+   ]
+  },
+  {
+   "name": "sphere",
+   "pos": [
+    -16.0,
+    8.0,
+    33.5
+   ]
+  }
+ ],
+ "anchor_step": 1,
+ "stills": [
+  {
+   "name": "s00",
+   "t": 0.0
+  },
+  {
+   "name": "s05",
+   "t": 5.5
+  },
+  {
+   "name": "s09",
+   "t": 9.0
+  },
+  {
+   "name": "s12",
+   "t": 12.3
+  },
+  {
+   "name": "s125",
+   "t": 12.5
+  },
+  {
+   "name": "s13",
+   "t": 13.2
+  },
+  {
+   "name": "s17",
+   "t": 17.0
+  },
+  {
+   "name": "s20",
+   "t": 19.8
+  },
+  {
+   "name": "s22",
+   "t": 22.5
+  },
+  {
+   "name": "s24",
+   "t": 24.4
+  },
+  {
+   "name": "s25",
+   "t": 25.3
+  },
+  {
+   "name": "s29",
+   "t": 29.5
+  },
+  {
+   "name": "s335",
+   "t": 33.5
+  },
+  {
+   "name": "s40",
+   "t": 39.958333
+  }
+ ],
+ "overlay": {
+  "labels": "labels.json",
+  "captions": "captions.json",
+  "anchor_for": {
+   "L6_dome": "bands",
+   "L4_coffers": "bowl",
+   "L5_oculus": "oculus",
+   "L2_columns": "columns",
+   "L3_pediment": "inscription",
+   "L1_arches": "arches",
+   "L7_sphere": "sphere"
+  },
+  "place": {
+   "L6_dome": {
+    "zone": "top",
+    "side": "left",
+    "y": 250
+   },
+   "L4_coffers": {
+    "zone": "bottom",
+    "side": "left",
+    "y": 1330
+   },
+   "L5_oculus": {
+    "zone": "top",
+    "side": "right",
+    "y": 240
+   },
+   "L2_columns": {
+    "zone": "top",
+    "side": "left",
+    "y": 540
+   },
+   "L3_pediment": {
+    "zone": "bottom",
+    "side": "right",
+    "y": 1360
+   },
+   "L1_arches": {
+    "zone": "top",
+    "side": "left",
+    "y": 230
+   },
+   "L7_sphere": {
+    "zone": "top",
+    "side": "right",
+    "y": 330
+   }
+  }
+ },
+ "draft_render": {
+  "samples": 6,
+  "set": {
+   "shadow_res": 0.3,
+   "raytracing": 0
+  }
+ },
+ "music": {
+  "file": "music/bach_air_usaf.mp3",
+  "start": 4.2,
+  "fade_in": 0.3,
+  "fade_out": 2.7,
+  "lufs": -14,
+  "tp": -1.5,
+  "lra": 11,
+  "credit": "J. S. Bach, Air (BWV 1068) - United States Air Force Band, Air Force Strings - public domain (Wikimedia Commons)"
+ },
+ "shots": [
+  {
+   "name": "hero_exterior",
+   "az": -38,
+   "el": 11,
+   "dist": 178,
+   "target": [
+    0,
+    -14,
+    15
+   ],
+   "lens": 38
+  },
+  {
+   "name": "portico_closeup",
+   "az": -24,
+   "el": 5,
+   "dist": 50,
+   "target": [
+    0,
+    -50,
+    17.0
+   ],
+   "lens": 34
+  }
+ ],
+ "wall_diagram": {
+  "note": "relieving-arch segment: build_pantheon._wall_diagram (piers, voids, 3 tiers of voussoir arches, gold load lines)",
+  "show": [
+   20.45,
+   26.95
+  ],
+  "ghost": [
+   [
+    22.1,
+    0.0
+   ],
+   [
+    22.9,
+    0.9
+   ],
+   [
+    26.05,
+    0.9
+   ],
+   [
+    26.75,
+    0.0
+   ]
+  ],
+  "ring": [
+   [
+    22.75,
+    0.0
+   ],
+   [
+    23.1,
+    1.0
+   ],
+   [
+    26.0,
+    1.0
+   ],
+   [
+    26.5,
+    0.0
+   ]
+  ],
+  "flow_t0": [
+   23.95,
+   23.6,
+   23.2
+  ],
+  "flow_speed": 15.0,
+  "flow_fade": [
+   26.0,
+   26.6
+  ],
+  "pier_pour": [
+   [
+    24.15,
+    0.0
+   ],
+   [
+    25.5,
+    1.0
+   ],
+   [
+    26.0,
+    1.0
+   ],
+   [
+    26.6,
+    0.0
+   ]
+  ]
+ },
+ "real_look_note": "golden_hour preset (kit/light_presets.py), held for the whole film; the key values are also written out here (equal to the preset). No blueprint/x-ray graphics, default label cards. Ground colour: a yellow-orange sun (#FFB462, sun glow #FFBE72), a blue sky fill (#8DB0D4, not violet) and warm-stone piazza/paving albedo (real_palette) keep the grey paving from reading pink-purple. sun_glow 0.6 / sun_glow_width 0.3 keep the into-sun shots (27-36 s) from washing the sky peach. sun_keys dims the key sun to 10 % for the relieving-arch diagram (ramp 20.3-21.8 s during the orbit, back to 100 % on the hard cut at 27.0 s) so the front-lit drum stays darker than the orange arches / gold force lines.",
+ "grade_note": "overlay.py grade = the golden_hour preset grade (vignette, bottom darkening, S-curve, split tone) plus 'off' spans. hue_fix band 1 pulls low-saturation pink/salmon/mauve (296-34 deg, soft 40) to warm stone 32 deg; band 2 gently pulls lilac (228-298 deg, soft 35, k 0.6) toward blue 222 deg. The two bands meet only across wide soft edges: a hard split between them folds smooth gradients (sun glow, palazzi roofs) into a magenta/green seam. shadow_cool adds a little blue to near-neutral shadows. hue_fix and shadow_cool are off in the scan interior (12.375-15.0 s, hard cuts at both ends) so the photo scan keeps its approved colours.",
+ "grade": {
+  "vignette": 0.35,
+  "bottom": [
+   0.78,
+   0.18
+  ],
+  "contrast": 0.12,
+  "saturation": 1.06,
+  "shadow_hex": "#2E4F70",
+  "shadow_k": 0.1,
+  "high_hex": "#FFC890",
+  "high_k": 0.12,
+  "hue_fix": [
+   {
+    "from": [
+     296,
+     34
+    ],
+    "to": 32,
+    "k": 1.0,
+    "soft": 40,
+    "sat": [
+     0.34,
+     0.55
+    ],
+    "off": [
+     [
+      12.375,
+      15.0
+     ]
+    ]
+   },
+   {
+    "from": [
+     228,
+     298
+    ],
+    "to": 222,
+    "k": 0.6,
+    "soft": 35,
+    "sat": [
+     0.3,
+     0.6
+    ],
+    "off": [
+     [
+      12.375,
+      15.0
+     ]
+    ]
+   }
+  ],
+  "shadow_cool": {
+   "rgb": [
+    -0.025,
+    0,
+    0.035
+   ],
+   "k": 2.0,
+   "l": [
+    0.35,
+    0.62
+   ],
+   "sat_max": 0.2,
+   "off": [
+    [
+     12.375,
+     15.0
+    ]
+   ]
+  }
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "glb": "models/pantheon/the_pantheon_interior_4k.glb",
+ "out_blend": "models/pantheon/interior_prepped.blend",
+ "out_json": "models/pantheon/interior_prepped.json",
+ "collection": "pantheon_interior_scan",
+ "prefix": "scan_interior_",
+ "measure": {
+  "mode": "rotunda",
+  "real_diameter": 43.3,
+  "real_height": 43.3,
+  "slice_above_floor": 5.0,
+  "use": "mean"
+ },
+ "align": {
+  "entrance_to_az": 270
+ },
+ "shading": {
+  "emission": 0.78,
+  "principled": 0.22,
+  "roughness": 0.8
+ },
+ "sunbeam": {
+  "sun_az": 75,
+  "sun_el": 55,
+  "strength": 30,
+  "volume_density": 0.06,
+  "anisotropy": 0.3
+ },
+ "render": {
+  "path": "out/lookdev_real/interior_scan.png",
+  "res": [
+   1080,
+   1920
+  ],
+  "samples": 24,
+  "repeat": 2,
+  "sky": 1.0,
+  "view_transform": "Standard",
+  "camera": {
+   "loc": [
+    0,
+    14,
+    1.7
+   ],
+   "target": [
+    0,
+    -8,
+    26
+   ],
+   "lens": 14
+  },
+  "sky_light": 0.15
+ }
+}

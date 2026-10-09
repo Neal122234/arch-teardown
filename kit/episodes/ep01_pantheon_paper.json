@@ -1,0 +1,579 @@
+{
+ "episode": "ep01",
+ "title": "万神殿 Pantheon, Rome",
+ "builder": "build_pantheon.py",
+ "fps": 24,
+ "duration": 40,
+ "lens": 38,
+ "render": {
+  "samples": 24,
+  "shadow_res": 0.4,
+  "raytracing": true,
+  "fast_gi": true
+ },
+ "backdrop": "table",
+ "palette": {
+  "table": "#EDE9E1",
+  "paving": "#C4B9A5",
+  "paving_light": "#DDD5C5",
+  "brick": "#C98A62",
+  "brick_dark": "#A1603F",
+  "travertine": "#E8DABD",
+  "travertine_dark": "#D6C4A0",
+  "marble_white": "#F2ECE1",
+  "granite_grey": "#8A8F97",
+  "granite_pink": "#BC8577",
+  "roof_lead": "#8C969D",
+  "lead": "#9FA9B0",
+  "lead_light": "#BAC1C4",
+  "coffer_rib": "#DDD5C6",
+  "coffer_in": "#BEB6A7",
+  "coffer_back": "#A9B5BE",
+  "coffer_plain": "#D3CBBC",
+  "marble_int": "#DDC089",
+  "attic": "#E6DDCF",
+  "niche": "#8F6E7C",
+  "giallo": "#DDB86C",
+  "porphyry": "#99493F",
+  "bronze": "#72603F",
+  "bronze_dark": "#4F4432"
+ },
+ "look": {
+  "sun_az": -50,
+  "sun_el": 48,
+  "sun_angle": 9,
+  "sun_strength": 3.2,
+  "fill_strength": 0.5,
+  "fill_az": 140,
+  "fill_el": 35,
+  "sky_strength": 0.9
+ },
+ "schedule": [
+  {
+   "part": "ground",
+   "role": "board",
+   "t": 0.0,
+   "dur": 0.7,
+   "mode": "pop"
+  },
+  {
+   "part": "ground",
+   "role": "podium",
+   "t": 0.5,
+   "dur": 0.6,
+   "mode": "grow"
+  },
+  {
+   "part": "ground",
+   "role": "steps",
+   "t": 0.7,
+   "dur": 0.5,
+   "stagger": 0.08,
+   "mode": "grow"
+  },
+  {
+   "part": "floor",
+   "t": 1.0,
+   "dur": 0.45,
+   "stagger": 0.011,
+   "mode": "pop",
+   "order": "radial"
+  },
+  {
+   "part": "ring_wall",
+   "role": "drum",
+   "t": 2.6,
+   "dur": 0.9,
+   "stagger": 0.1,
+   "mode": "fold",
+   "order": "az",
+   "fold_angle": 88
+  },
+  {
+   "part": "ring_wall",
+   "role": "interior",
+   "t": 3.6,
+   "dur": 0.6,
+   "stagger": 0.05,
+   "mode": "grow"
+  },
+  {
+   "part": "ring_wall",
+   "role": "cornice",
+   "t": 4.6,
+   "dur": 0.5,
+   "stagger": 0.02,
+   "mode": "grow",
+   "order": "ring",
+   "ring_step": 0.35
+  },
+  {
+   "part": "relieving_arches",
+   "t": 5.6,
+   "dur": 0.5,
+   "stagger": 0.03,
+   "mode": "pop",
+   "order": "ring",
+   "ring_step": 0.35
+  },
+  {
+   "part": "intermediate_block",
+   "t": 7.4,
+   "dur": 0.8,
+   "stagger": 0.15,
+   "mode": "grow"
+  },
+  {
+   "part": "doors",
+   "t": 8.6,
+   "dur": 0.6,
+   "stagger": 0.15,
+   "mode": "grow"
+  },
+  {
+   "part": "portico_columns",
+   "t": 9.6,
+   "dur": 0.7,
+   "stagger": 0.12,
+   "mode": "grow"
+  },
+  {
+   "part": "pediment",
+   "t": 12.2,
+   "dur": 0.7,
+   "stagger": 0.3,
+   "mode": "grow"
+  },
+  {
+   "part": "dome_outer",
+   "rings": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "t": 14.8,
+   "dur": 0.5,
+   "stagger": 0.015,
+   "mode": "grow",
+   "order": "ring",
+   "ring_step": 0.35
+  },
+  {
+   "part": "coffers",
+   "t": 15.2,
+   "dur": 0.4,
+   "stagger": 0.01,
+   "mode": "pop",
+   "order": "ring",
+   "ring_step": 0.5
+  },
+  {
+   "part": "dome_outer",
+   "rings": [
+    7,
+    8,
+    9,
+    10,
+    11
+   ],
+   "t": 17.4,
+   "dur": 0.7,
+   "stagger": 0.02,
+   "mode": "fold",
+   "order": "ring",
+   "ring_step": 0.6,
+   "fold_angle": 75
+  },
+  {
+   "part": "oculus",
+   "t": 21.2,
+   "dur": 0.6,
+   "stagger": 0.05,
+   "mode": "pop"
+  },
+  {
+   "part": "section_sphere",
+   "t": 28.8,
+   "dur": 0.9,
+   "stagger": 0.0,
+   "mode": "pop",
+   "overshoot": 1.2
+  },
+  {
+   "part": "section_sphere",
+   "t": 33.6,
+   "dur": 0.6,
+   "mode": "vanish"
+  }
+ ],
+ "section": [
+  {
+   "t": 26.0,
+   "dur": 2.4,
+   "az": 90,
+   "from": 45
+  },
+  {
+   "t": 35.0,
+   "dur": 1.5,
+   "az": 90,
+   "restore": true
+  }
+ ],
+ "camera": [
+  {
+   "t": 0.0,
+   "az": -32,
+   "el": 30,
+   "dist": 165,
+   "target": [
+    0,
+    -12,
+    8
+   ],
+   "lens": 38
+  },
+  {
+   "t": 5.5,
+   "az": -18,
+   "el": 32,
+   "dist": 160,
+   "target": [
+    0,
+    -12,
+    10
+   ],
+   "lens": 38
+  },
+  {
+   "t": 9.0,
+   "az": -24,
+   "el": 16,
+   "dist": 128,
+   "target": [
+    0,
+    -28,
+    11
+   ],
+   "lens": 38
+  },
+  {
+   "t": 13.8,
+   "az": -12,
+   "el": 14,
+   "dist": 120,
+   "target": [
+    0,
+    -30,
+    13
+   ],
+   "lens": 38
+  },
+  {
+   "t": 16.0,
+   "az": 0,
+   "el": 62,
+   "dist": 135,
+   "target": [
+    0,
+    -8,
+    18
+   ],
+   "lens": 38
+  },
+  {
+   "t": 20.5,
+   "az": 25,
+   "el": 55,
+   "dist": 140,
+   "target": [
+    0,
+    -8,
+    20
+   ],
+   "lens": 38
+  },
+  {
+   "t": 22.5,
+   "az": 38,
+   "el": 24,
+   "dist": 165,
+   "target": [
+    0,
+    -12,
+    16
+   ],
+   "lens": 38
+  },
+  {
+   "t": 25.5,
+   "az": 70,
+   "el": 16,
+   "dist": 150,
+   "target": [
+    0,
+    -12,
+    18
+   ],
+   "lens": 38
+  },
+  {
+   "t": 28.0,
+   "az": 90,
+   "el": 6,
+   "dist": 128,
+   "target": [
+    0,
+    -6,
+    21
+   ],
+   "lens": 38
+  },
+  {
+   "t": 32.0,
+   "az": 92,
+   "el": 6,
+   "dist": 120,
+   "target": [
+    0,
+    -4,
+    21
+   ],
+   "lens": 38
+  },
+  {
+   "t": 34.0,
+   "az": 90,
+   "el": 2,
+   "dist": 16,
+   "target": [
+    0,
+    0,
+    20
+   ],
+   "lens": 24
+  },
+  {
+   "t": 37.5,
+   "az": 90,
+   "el": -72,
+   "dist": 30,
+   "target": [
+    0,
+    0,
+    43.3
+   ],
+   "lens": 18
+  },
+  {
+   "t": 40.0,
+   "az": 110,
+   "el": -72,
+   "dist": 30,
+   "target": [
+    0,
+    0,
+    43.3
+   ],
+   "lens": 18
+  }
+ ],
+ "anchors": [
+  {
+   "name": "floor",
+   "pos": [
+    -8,
+    5,
+    0.2
+   ]
+  },
+  {
+   "name": "ring_wall",
+   "pos": [
+    -26.0,
+    -9.5,
+    18.0
+   ]
+  },
+  {
+   "name": "relieving_arches",
+   "pos": [
+    -24.0,
+    13.8,
+    18.0
+   ]
+  },
+  {
+   "name": "intermediate_block",
+   "pos": [
+    15.0,
+    -38.5,
+    22.0
+   ]
+  },
+  {
+   "name": "doors",
+   "pos": [
+    0,
+    -37.9,
+    5.0
+   ]
+  },
+  {
+   "name": "portico_columns",
+   "pos": [
+    -15.6,
+    -50.0,
+    12.0
+   ]
+  },
+  {
+   "name": "pediment",
+   "pos": [
+    0,
+    -51.3,
+    25.5
+   ]
+  },
+  {
+   "name": "dome_outer",
+   "pos": [
+    0,
+    -16.0,
+    41.0
+   ]
+  },
+  {
+   "name": "dome_steps",
+   "pos": [
+    0,
+    -25.3,
+    33.0
+   ]
+  },
+  {
+   "name": "coffers",
+   "pos": [
+    -18.75,
+    0,
+    32.5
+   ]
+  },
+  {
+   "name": "oculus",
+   "pos": [
+    0,
+    0,
+    45.3
+   ]
+  },
+  {
+   "name": "sphere_center",
+   "pos": [
+    0,
+    0,
+    21.65
+   ]
+  },
+  {
+   "name": "sphere_top",
+   "pos": [
+    0,
+    0,
+    43.3
+   ]
+  },
+  {
+   "name": "sphere_bottom",
+   "pos": [
+    0,
+    0,
+    0.0
+   ]
+  },
+  {
+   "name": "sphere_front",
+   "pos": [
+    0,
+    -21.65,
+    21.65
+   ]
+  },
+  {
+   "name": "sphere_back",
+   "pos": [
+    0,
+    21.65,
+    21.65
+   ]
+  },
+  {
+   "name": "building_top",
+   "part": "dome_outer",
+   "where": "top"
+  }
+ ],
+ "anchor_step": 1,
+ "stills": [
+  {
+   "name": "01_exterior_mid_rise",
+   "t": 11.0
+  },
+  {
+   "name": "02_exterior_complete",
+   "t": 23.5
+  },
+  {
+   "name": "03_section_sphere",
+   "t": 31.0
+  },
+  {
+   "name": "04_interior_oculus",
+   "t": 39.0
+  },
+  {
+   "name": "x_drum_folding",
+   "t": 3.3
+  },
+  {
+   "name": "x_dome_closing",
+   "t": 18.6
+  }
+ ],
+ "real_palette": {},
+ "real_look": {},
+ "real_render": {
+  "samples": 16,
+  "shadow_res": 0.45
+ },
+ "shots": [
+  {
+   "name": "hero_exterior",
+   "az": -38,
+   "el": 11,
+   "dist": 178,
+   "target": [
+    0,
+    -14,
+    15
+   ],
+   "lens": 38
+  },
+  {
+   "name": "portico_closeup",
+   "az": -24,
+   "el": 5,
+   "dist": 50,
+   "target": [
+    0,
+    -50,
+    17.0
+   ],
+   "lens": 34
+  }
+ ]
+}
